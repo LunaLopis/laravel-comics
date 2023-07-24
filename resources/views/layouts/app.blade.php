@@ -16,17 +16,14 @@
 </head>
 
 <body>
-    <div class="bg-dark text-white">
-
-            <div class="row">
-               
-                <div class="col">
-                  menu
-                </div>
-
-            </div>
-
-    </div> 
+    
+    @include('partials.header')
+    <div class="jumbotron">
+    </div>
+    <main>
+        @yield('content')
+       </main>
+@include('partials.footer') 
 
 </body>
 

@@ -42,7 +42,7 @@
                    <a href="">CHARACTER</a>
                 </li>
                 <li>
-                    <a href="">COMICS</a>
+                    <a href="{{ url('/comics') }}">COMICS</a>
                  </li>
                  <li>
                     <a href="">MOVIES</a>

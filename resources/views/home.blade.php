@@ -1,44 +1,121 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+{{-- estendo app.blade che contiene il layout di base header/footer, con yield al centro --}}
+@extends('layouts.app')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    @vite('resources/js/app.js')
-
-</head>
-
-<body>
+@section('content')
     
-    @include('partials.header')
-    <div class="jumbotron">
-
-    </div>
     <section class="bg-black pt-5">
         <div class="container">
             <div class="row">
-                @foreach ($comics as $comic)
+                @foreach ($comics as $id => $comic)
                     <div class="col col-lg-2 col-md-4 col-sm-12">
-                        <div class="card mb-3 bg-black" >
-                            <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title text-white">{{$comic['series']}}</h5>
+                        <a href="{{ route('comics.details', ['comic' => $id]) }}">
+                            <div class="card mb-3 " >
+                                <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$comic['series']}}</h5>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 @endforeach
             </div>
         </div>
     </section>
-@include('partials.footer') 
 
-</body>
+    <section>
+        <div class="bg-primary">
 
-</html>
+            <div class="row">
+               
+                <div class="col">
+                    <div class="card d-flex justify-center bg-primary ">
+                        <div class="card mb-3" style="max-width: 300px;">
+                            <div class="row g-0">
+                                <div class="col-md-4 bg-primary">
+                                    <img class="img-card height-100px bg-primary" style="max-width: 100px;"alt="" src="{{Vite::asset('resources/img/buy-comics-digital-comics.png')}}">
+                                </div>
+                              <div class="col-md-8">
+                                  <div class="card-body">
+                                      <h6 class=" card-text">DIGITAL COMICS</h6>
+                                   </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>  
+
+                <div class="col">
+                    <div class="card d-flex justify-center bg-primary ">
+                        <div class="card mb-3" style="max-width: 300px;">
+                            <div class="row g-0">
+                                <div class="col-md-4 bg-primary">
+                                    <img class="img-card height-100px bg-primary" style="max-width: 100px;"alt="" src="{{Vite::asset('resources/img/buy-comics-digital-comics.png')}}">
+                                </div>
+                              <div class="col-md-8">
+                                  <div class="card-body">
+                                      <h6 class=" card-text">DIGITAL COMICS</h6>
+                                   </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div> 
+
+                <div class="col">
+                    <div class="card d-flex justify-center bg-primary ">
+                        <div class="card mb-3" style="max-width: 300px;">
+                            <div class="row g-0">
+                                <div class="col-md-4 bg-primary">
+                                    <img class="img-card height-100px bg-primary" style="max-width: 100px;"alt="" src="{{Vite::asset('resources/img/buy-comics-digital-comics.png')}}">
+                                </div>
+                              <div class="col-md-8">
+                                  <div class="card-body">
+                                      <h6 class=" card-text">DIGITAL COMICS</h6>
+                                   </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div> 
+
+                <div class="col">
+                    <div class="card d-flex justify-center bg-primary ">
+                        <div class="card mb-3" style="max-width: 300px;">
+                            <div class="row g-0">
+                                <div class="col-md-4 bg-primary">
+                                    <img class="img-card height-100px bg-primary" style="max-width: 100px;"alt="" src="{{Vite::asset('resources/img/buy-comics-digital-comics.png')}}">
+                                </div>
+                              <div class="col-md-8">
+                                  <div class="card-body">
+                                      <h6 class=" card-text">DIGITAL COMICS</h6>
+                                   </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div> 
+
+                <div class="col">
+                    <div class="card d-flex justify-center bg-primary ">
+                        <div class="card mb-3" style="max-width: 300px;">
+                            <div class="row g-0">
+                                <div class="col-md-4 bg-primary">
+                                    <a href="{{ url('partials/info') }}">
+                                        <img class="img-card height-100px bg-primary" style="max-width: 100px;"alt="" src="{{Vite::asset('resources/img/buy-comics-digital-comics.png')}}">
+                                    </a>                                   
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h6 class=" card-text">DIGITAL COMICS</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+
+            </div>
+
+    </div> 
+    </section>
+    @endsection

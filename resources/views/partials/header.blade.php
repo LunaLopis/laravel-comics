@@ -16,11 +16,63 @@
 </head>
 
 <body>
-    <div class="cont-blu d-flex justify-content-between">
-         <img src="{{Vite::asset('resources/img/dc-logo.png')}}">
-    </div>
+    <div class="bg-primary p-2">
+        <div class="container">
+            <div class="row">
+               <div class="col">
     
-  
+                <div class=" d-flex justify-content-end text-white">
+                    <h5>DC POWER-VISA</h5>
+                    <h5>ADDITIONAL DC SITES</h5>
+              </div>
+               </div>
+            </div>
+         </div>
+    </div>
+    <header class="container d-flex justify-content-between">
+        <div>
+            <a href="/" class="brand ">
+                <img src="{{Vite::asset('resources/img/dc-logo.png')}}">
+            </a> 
+        </div>
+
+        <nav>
+            <ul class="navbar" >
+                <li>
+                   <a href="">CHARACTER</a>
+                </li>
+                <li>
+                    <a href="">COMICS</a>
+                 </li>
+                 <li>
+                    <a href="">MOVIES</a>
+                 </li>
+                 <li>
+                    <a href="">TV</a>
+                 </li>
+                 <li>
+                    <a href="">Games</a>
+                 </li>
+                 <li>
+                    <a href="">COLLECTIBLES</a>
+                 </li>
+                 <li>
+                    <a href="">VIDEOS</a>
+                 </li>
+                 <li>
+                    <a href="">FANS</a>
+                 </li>
+                 <li>
+                    <a href="">NEWS</a>
+                 </li>
+                 <li>
+                    <a href="">SHOP</a>
+                 </li>
+            </ul>
+        </nav>
+        <input type="search" placeholder="Search" aria-label="Search">
+   
+    </header>
 
 </body>
 
